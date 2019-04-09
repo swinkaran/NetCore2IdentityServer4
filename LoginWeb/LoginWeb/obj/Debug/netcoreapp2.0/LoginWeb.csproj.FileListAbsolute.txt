@@ -1,0 +1,11 @@
+c:\users\broswebs-desk\documents\visual studio 2017\Projects\LoginWeb\LoginWeb\bin\Debug\netcoreapp2.0\LoginWeb.deps.json
+c:\users\broswebs-desk\documents\visual studio 2017\Projects\LoginWeb\LoginWeb\bin\Debug\netcoreapp2.0\LoginWeb.runtimeconfig.json
+c:\users\broswebs-desk\documents\visual studio 2017\Projects\LoginWeb\LoginWeb\bin\Debug\netcoreapp2.0\LoginWeb.runtimeconfig.dev.json
+c:\users\broswebs-desk\documents\visual studio 2017\Projects\LoginWeb\LoginWeb\bin\Debug\netcoreapp2.0\LoginWeb.dll
+c:\users\broswebs-desk\documents\visual studio 2017\Projects\LoginWeb\LoginWeb\bin\Debug\netcoreapp2.0\LoginWeb.pdb
+c:\users\broswebs-desk\documents\visual studio 2017\Projects\LoginWeb\LoginWeb\obj\Debug\netcoreapp2.0\LoginWeb.csprojAssemblyReference.cache
+c:\users\broswebs-desk\documents\visual studio 2017\Projects\LoginWeb\LoginWeb\obj\Debug\netcoreapp2.0\LoginWeb.csproj.CoreCompileInputs.cache
+c:\users\broswebs-desk\documents\visual studio 2017\Projects\LoginWeb\LoginWeb\obj\Debug\netcoreapp2.0\LoginWeb.AssemblyInfoInputs.cache
+c:\users\broswebs-desk\documents\visual studio 2017\Projects\LoginWeb\LoginWeb\obj\Debug\netcoreapp2.0\LoginWeb.AssemblyInfo.cs
+c:\users\broswebs-desk\documents\visual studio 2017\Projects\LoginWeb\LoginWeb\obj\Debug\netcoreapp2.0\LoginWeb.dll
+c:\users\broswebs-desk\documents\visual studio 2017\Projects\LoginWeb\LoginWeb\obj\Debug\netcoreapp2.0\LoginWeb.pdb
