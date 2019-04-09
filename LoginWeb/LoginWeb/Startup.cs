@@ -1,14 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using Microsoft.AspNetCore.Diagnostics;
 using System.Threading.Tasks;
 using IdentityServer4.Services;
 using IdentityServer4.Validation;
 using LoginWeb.Data;
+using LoginWeb.Helper;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
 
 namespace LoginWeb
 {
@@ -37,11 +42,26 @@ namespace LoginWeb
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.Run(async (context) =>
+            else
             {
-                await context.Response.WriteAsync("Hello World!");
-            });
+                app.UseExceptionHandler(builder =>
+                {
+                    builder.Run(async context =>
+                    {
+                        context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+                        var error = context.Features[typeof(IExceptionHandlerFeature)] as IExceptionHandlerFeature;
+                        if (error != null)
+                        {
+                            string jsonError = JsonConvert.SerializeObject(Utilities.GetError(123, (int)HttpStatusCode.InternalServerError, "Error", "Error description")); // this creates a new Error object. It needs the Error.cs
+                            context.Response.ContentType = "application / json; charset = utf - 8";
+                            context.Response.AddApplicationError(jsonError); // this adds to the headers the error message. It needs the Extension.cs
+                            await context.Response.WriteAsync(jsonError);
+                        }
+                    });
+                });// this will add the global exception handle for production evironment.
+            }
+            app.UseIdentityServer(); // this will add the IdentityServer
+            app.UseMvc();
         }
     }
 }
