@@ -1,0 +1,14 @@
+C:\Users\srikarans\Documents\GitHub\NetCore2IdentityServer4\LoginWeb\ResourceAPI\bin\Debug\netcoreapp2.0\ResourceAPI.deps.json
+C:\Users\srikarans\Documents\GitHub\NetCore2IdentityServer4\LoginWeb\ResourceAPI\bin\Debug\netcoreapp2.0\ResourceAPI.runtimeconfig.json
+C:\Users\srikarans\Documents\GitHub\NetCore2IdentityServer4\LoginWeb\ResourceAPI\bin\Debug\netcoreapp2.0\ResourceAPI.runtimeconfig.dev.json
+C:\Users\srikarans\Documents\GitHub\NetCore2IdentityServer4\LoginWeb\ResourceAPI\bin\Debug\netcoreapp2.0\ResourceAPI.dll
+C:\Users\srikarans\Documents\GitHub\NetCore2IdentityServer4\LoginWeb\ResourceAPI\obj\Debug\netcoreapp2.0\ResourceAPI.csprojAssemblyReference.cache
+C:\Users\srikarans\Documents\GitHub\NetCore2IdentityServer4\LoginWeb\ResourceAPI\obj\Debug\netcoreapp2.0\ResourceAPI.csproj.CoreCompileInputs.cache
+C:\Users\srikarans\Documents\GitHub\NetCore2IdentityServer4\LoginWeb\ResourceAPI\obj\Debug\netcoreapp2.0\ResourceAPI.AssemblyInfoInputs.cache
+C:\Users\srikarans\Documents\GitHub\NetCore2IdentityServer4\LoginWeb\ResourceAPI\obj\Debug\netcoreapp2.0\ResourceAPI.AssemblyInfo.cs
+C:\Users\srikarans\Documents\GitHub\NetCore2IdentityServer4\LoginWeb\ResourceAPI\bin\Debug\netcoreapp2.0\LoginWeb.dll
+C:\Users\srikarans\Documents\GitHub\NetCore2IdentityServer4\LoginWeb\ResourceAPI\bin\Debug\netcoreapp2.0\LoginWeb.pdb
+C:\Users\srikarans\Documents\GitHub\NetCore2IdentityServer4\LoginWeb\ResourceAPI\obj\Debug\netcoreapp2.0\ResourceAPI.csproj.CopyComplete
+C:\Users\srikarans\Documents\GitHub\NetCore2IdentityServer4\LoginWeb\ResourceAPI\bin\Debug\netcoreapp2.0\ResourceAPI.pdb
+C:\Users\srikarans\Documents\GitHub\NetCore2IdentityServer4\LoginWeb\ResourceAPI\obj\Debug\netcoreapp2.0\ResourceAPI.dll
+C:\Users\srikarans\Documents\GitHub\NetCore2IdentityServer4\LoginWeb\ResourceAPI\obj\Debug\netcoreapp2.0\ResourceAPI.pdb
