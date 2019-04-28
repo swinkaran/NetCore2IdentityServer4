@@ -10,12 +10,12 @@ namespace ResourceAPI.Controllers
 {
     [Produces("application/json")]
     [Route("api/Expenses")]
-    [Authorize]
+    
     public class ExpensesController : Controller
     {
         // GET: api/Expenses
         [HttpGet]
-        
+        [Authorize]
         public IEnumerable<string> Get()
         {
             return new string[] { "Expense 1", "Expense 2" };

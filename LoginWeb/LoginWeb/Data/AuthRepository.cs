@@ -19,6 +19,7 @@ namespace LoginWeb.Data
         static HttpClient client = new HttpClient();
         readonly string TswCustomEntpoint = "http";
         readonly string TswProxyEntpoint = "http://10.2.180.10:8086/api/tswuser&#8221";
+
         public async Task<string> GetUserCredentials(string username)
         {
             // Return the string with the credentials
@@ -28,7 +29,11 @@ namespace LoginWeb.Data
         public async Task<RootObject> ValidateUserAsync(string username, string password)
         {
             // Returns the user information.
-            return new RootObject();
+            RootObject root = new RootObject();
+            root.ValidateUser = new ValidateUser { UserName = "alice", UserID = 121212, Result = 1 };
+
+            return root;
+            //return new RootObject();
         }
     }
 }

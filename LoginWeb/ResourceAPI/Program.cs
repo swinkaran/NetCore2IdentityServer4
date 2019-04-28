@@ -18,9 +18,10 @@ namespace ResourceAPI
         }
 
         public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
-            .UseUrls(new[] { "http://localhost:5001" })
+                     WebHost.CreateDefaultBuilder(args)
+                           .UseStartup<Startup>()
+                           .UseUrls(new[] { "http://*:5001&#8221;" })
+                //.UseUrls(new[] { "http://localhost:5001" })
                 .Build();
     }
 }

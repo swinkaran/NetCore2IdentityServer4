@@ -18,9 +18,9 @@ namespace LoginWeb
         }
 
         public static IWebHost BuildWebHost(string[] args) =>
-                    WebHost.CreateDefaultBuilder(args)
-                        .UseStartup<Startup>()
-                                 .UseUrls(new[] { "http://*:5000&#8221" })
-                           .Build();
+            WebHost.CreateDefaultBuilder(args)
+                .UseStartup<Startup>()
+                .UseUrls(new[] { "http://*:5000" })
+                .Build();
     }
 }

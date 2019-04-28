@@ -14,25 +14,42 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
+using Microsoft.Extensions.Configuration;
+using System.IO;
 
 namespace LoginWeb
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; set; }
+        public Startup(IConfiguration configuration)
+        {
+            //Configuration = configuration;
+            var builder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json");
+
+            Configuration = builder.Build();
+
+        }
+
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvcCore().AddJsonFormatters(); // Add mvc and able to wok with json
+            services
+                .AddMvcCore() // Adding  mvc core
+                .AddJsonFormatters() // Add mvc and able to wok with json
+            .AddRazorViewEngine(); ;
 
             //dependency injection
             services.AddScoped<IAuthRepository, AuthRepository>(); // Adds the AuthRepository
             services.AddScoped<IResourceOwnerPasswordValidator, ResourceOwnerPasswordValidator>(); // Adds the IdentityServer4 interface to customize the process of authentication
             services.AddScoped<IProfileService, ProfileService>(); // Adds the IdentityServer4 interface to customize the process of getting the claims.
+
             services.AddIdentityServer()
                   .AddDeveloperSigningCredential()
                   .AddInMemoryApiResources(Config.GetApiResources()) //Adds the APIResouces from the Config.cs 
-                  .AddInMemoryClients(Config.GetClients()); //Adds the Clients from the Config.cs
+                  .AddInMemoryClients(Config.GetClients()) //Adds the Clients from the Config.cs
+                  .AddInMemoryIdentityResources(Config.GetIdentityResources());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,8 +77,17 @@ namespace LoginWeb
                     });
                 });// this will add the global exception handle for production evironment.
             }
+
+            app.UseCors(builder =>
+            {
+                builder.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+            });
+
             app.UseIdentityServer(); // this will add the IdentityServer
             app.UseMvc();
+            app.UseMvcWithDefaultRoute();
         }
     }
 }
